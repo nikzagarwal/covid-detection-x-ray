@@ -1,0 +1,87 @@
+<html>
+
+<head>
+  <title>Covid Testing From X-Ray</title>
+  <style>
+    h1 {
+      border: #000000;
+      border-style: double;
+      background-color: rgb(6, 66, 66);
+      text-align: center;
+      margin: 10px;
+      padding: 20px;
+    }
+
+    img {
+      margin: 20px 30px 20px 20px;
+    }
+
+    .result {
+      background-color: rgb(129, 165, 212);
+      padding: 10%;
+      text-align: center;
+      font-size: xx-large;
+    }
+
+    p {
+      border: #000000;
+      border-style: double;
+      background-color: rgb(208, 212, 149);
+      text-align: center;
+      margin: 10px;
+      padding: 50px;
+      font-size: x-large;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px 50px 20px 50px;
+    }
+
+    .col-50 {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+    }
+    .but{
+    background-color:rgb(43, 41, 54);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    margin: 20px;
+    width: 200px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Test For Covid Now!</h1>
+    <p>"Now just enter your X-ray image and get Covid test result within seconds with 93% accuracy"</p>
+    <br>
+  </div>
+
+  <div class="container">
+    <form name="img" action="/result" method="POST" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-50">
+          <label for="img">Enter Your X-ray Image</label>
+        </div>
+        <div class="col-50">
+
+          <input type="file" id="img" accept="image/*" name="img" placeholder="enter x-ray image" required>
+        </div>
+      </div>
+      <div class="row ">
+        <button type="submit" class="but">Check Now</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
