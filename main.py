@@ -8,6 +8,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+# @app.route('/r')
+# def r():
+#     return render_template('result.html',res="Covid Negative")
 @app.route('/result',methods=['GET','POST'])
 def result():
     if request.method=='POST':

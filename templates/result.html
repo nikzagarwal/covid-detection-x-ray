@@ -1,40 +1,35 @@
 <html>
 
 <head>
-    <title>Covid Testing From X-Ray</title>
-    <style>
-        h1 {
-            border: #000000;
-            border-style: double;
-            background-color: rgb(6, 66, 66);
-            text-align: center;
-            margin: 20px;
-            padding: 20px;
-        }
 
-        img {
-            margin: 20px 30px 20px 20px;
-        }
+    <title>Covid Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .result {
-            border: #000000;
-      border-style: double;
-            border-radius: 5px;
-            background-color: rgb(208, 212, 149);
-            padding: 20px 50px 20px 50px;
-            margin: 20px;
-            text-align: center;
-            font-size: xx-large;
-        }
-    </style>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cssfile/style2.css') }}">
+    <script src="{{url_for('static',filename='jsfile/index.js')}}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
 </head>
 
 <body>
-    <header>
-        <h1>Your Covid Test Report</h1>
-    </header>
-    <div class="result">
-        <h2>{{res}}</h2>
+    <div class="section2">
+
+        <h1>Your Covid Test Report </h1>
+
+        <div class="results">
+            <h2>{{res}}</h2>
+        </div>
     </div>
 </body>
 

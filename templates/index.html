@@ -1,86 +1,54 @@
 <html>
 
+
 <head>
-  <title>Covid Testing From X-Ray</title>
-  <style>
-    h1 {
-      border: #000000;
-      border-style: double;
-      background-color: rgb(6, 66, 66);
-      text-align: center;
-      margin: 10px;
-      padding: 20px;
-    }
+  <title>Covid Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    img {
-      margin: 20px 30px 20px 20px;
-    }
-
-    .result {
-      background-color: rgb(129, 165, 212);
-      padding: 10%;
-      text-align: center;
-      font-size: xx-large;
-    }
-
-    p {
-      border: #000000;
-      border-style: double;
-      background-color: rgb(208, 212, 149);
-      text-align: center;
-      margin: 10px;
-      padding: 50px;
-      font-size: x-large;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-
-    .container {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px 50px 20px 50px;
-    }
-
-    .col-50 {
-      float: left;
-      width: 50%;
-      margin-top: 6px;
-    }
-    .but{
-    background-color:rgb(43, 41, 54);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    margin: 20px;
-    width: 200px;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-  }
-  </style>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='cssfile/style.css') }}">
+  <script src="{{url_for('static',filename='jsfile/index.js')}}"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 
 <body>
-  <div>
-    <h1>Test For Covid Now!</h1>
-    <p>"Now just enter your X-ray image and get Covid test result within seconds with 93% accuracy"</p>
-    <br>
-  </div>
+  <div class="section1">
+    <div class="container typing-text">
+      <p>Test for <span class="txt-rotate" data-period="2000"
+          data-rotate='[ "Covid", "No-Covid", "Pneumonia", "Viral"]'></span>
+        <span class="cursor">&nbsp;</span> Now!
+      </p>
 
-  <div class="container">
-    <form name="img" action="/result" method="POST" enctype="multipart/form-data">
-      <div class="row">
-        <div class="col-50">
-          <label for="img">Enter Your X-ray Image</label>
-        </div>
-        <div class="col-50">
+      <div class="section1text1">"Now just enter your X-ray image and get Covid test result within seconds with 98.5%
+        recall" </div>
+    </div>
 
-          <input type="file" id="img" accept="image/*" name="img" placeholder="enter x-ray image" required>
+    <div class="container createform">
+      <form name="img" action="/result" method="POST" enctype="multipart/form-data">
+
+        <div class="row">
+          <div class="col-50">
+            <label for="img">Enter Your X-ray Image</label>
+          </div>
+          <div class="col-50">
+            <input type="file" class="form-control" id="formFileLg" id="img" accept="image/*" name="img"
+              placeholder="enter x-ray image" required>
+             </div>
         </div>
-      </div>
-      <div class="row ">
-        <button type="submit" class="but">Check Now</button>
-      </div>
-    </form>
+        <div class="row ">
+          <button type="submit" class="but">Check Now</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 
